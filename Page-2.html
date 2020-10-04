@@ -60,7 +60,7 @@
 	<script>
 	var ticker = document.cookie;
 	var updated_url = "https://timelessmarketapi.herokuapp.com/fundamental/"+ticker;
-		
+	alert(updated_url);
  	fetch(updated_url)
           .then(function (response) {
             return response.json();
@@ -68,7 +68,7 @@
           .then(function (data) {
 
 
-		alert(data)
+		alert(data);
                document.getElementById("test").innerHTML = data;
           })
 
