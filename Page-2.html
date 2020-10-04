@@ -55,10 +55,27 @@
         </nav>
       </div></header>
     <section class="u-align-center u-clearfix u-section-1" id="sec-4533">
-	
+	    <p id="test"></p>
+	    
 	<script>
-		var x = document.cookie;
-		alert(x);
+	var ticker = document.cookie;
+	var updated_url = "https://timelessmarketapi.herokuapp.com/fundamental/"+ticker;
+		
+ 	fetch(updated_url)
+          .then(function (response) {
+            return response.json();
+          })
+          .then(function (data) {
+
+
+
+               document.getElementById("test").innerHTML = data;
+          })
+
+          .catch(function (err) {
+            console.log(err);
+          });
+		
 	
 	
 	
