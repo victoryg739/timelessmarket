@@ -58,7 +58,12 @@
 	    <p id="test"></p>
 	    
 	<script>
-	var ticker = document.cookie;
+	function getCookieValue(a) {
+	    var b = document.cookie.match('(^|;)\\s*' + a + '\\s*=\\s*([^;]+)');
+	    return b ? b.pop() : '';
+	}
+		
+	var ticker = getCookieValue("ticker")
 	var updated_url = "https://timelessmarketapi.herokuapp.com/fundamental/"+ticker;
  	fetch(updated_url)
           .then(function (response) {
