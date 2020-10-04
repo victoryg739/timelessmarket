@@ -73,7 +73,9 @@
  	fetch(updated_url).then(function (response) {
 		return response.json();
 	}).then(function(obj){
+		
 		console.log(obj);
+		document.getElementById("test").innerHTML = obj;
 	}).catch(function(error) {
 		console.error("something went retrieving data");
 	});
