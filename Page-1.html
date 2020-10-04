@@ -70,7 +70,8 @@
 				<script>
 				function searchStock(){
 				var  ticker = document.getElementById("name-c880").value;
-				document.cookie = "ticker="+ticker;
+				document.cookie = ticker;
+
 
 				window.location.replace("Page-2.html");
 				}
