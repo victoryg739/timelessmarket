@@ -73,7 +73,7 @@
  	fetch(updated_url).then(function (response) {
 		return response.json();
 	}).then(function(obj){
-		
+		alert(obj);
 		console.log(obj);
 		document.getElementById("test").innerHTML = obj;
 	}).catch(function(error) {
