@@ -68,7 +68,7 @@
 	}
 		
 	var ticker = getCookieValue("ticker")
-	var updated_url = "https://timelessmarketapi.herokuapp.com/fundamental/"+"msft";
+	var updated_url = "https://timelessmarketapi.herokuapp.com/fundamental/"+ticker;
 		
  	fetch(updated_url).then(function (response) {
 		return response.json();
