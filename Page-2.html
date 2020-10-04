@@ -72,6 +72,7 @@
 		
  	fetch(updated_url)
          .then(function (response) {
+		alert(response.json());
             return response.json();
           })
           .then(function (data) {
