@@ -27,6 +27,14 @@
 		"url": "index.html",
 		"logo": "np://user.desktop.nicepage.com/Site_285462087/images/009-04.jpg"
 }</script>
+
+      <script>
+        function getCookieValue(a) {
+	        var b = document.cookie.match('(^|;)\\s*' + a + '\\s*=\\s*([^;]+)');
+	    return b ? b.pop() : '';
+	}
+      </script>
+
     <meta property="og:title" content="Page 2">
     <meta property="og:type" content="website">
     <meta name="theme-color" content="#478ac9">
@@ -59,42 +67,129 @@
           </div>
         </nav>
       </div></header>
-    <section class="u-align-center u-clearfix u-section-1" id="sec-4533">
-	    
-  <div style="margin-top:5%;" class="card bg-light text-dark">
+    <section style="margin:3%; class="u-align-center u-clearfix u-section-1" id="sec-4533">
 
-    <div class="card-header">test</div>
+  <h3 id="stockLongName">Apple (AAPL)</h3>
+
+  <!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div  style="height: 300px;" id="tradingview_e64b5"></div>
+  <div class="tradingview-widget-copyright">by TradingView</div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
+  new TradingView.widget(
+  {
+  "autosize": true,
+  "symbol": getCookieValue("ticker"),
+  "timezone": "Etc/UTC",
+  "theme": "light",
+  "style": "1",
+  "locale": "en",
+  "toolbar_bg": "#f1f3f6",
+  "enable_publishing": false,
+  "range": "12M",
+  "save_image": false,
+  "details": false,
+  "no_referral_id": true,
+  "container_id": "tradingview_e64b5"
+}
+  );
+  </script>
+</div>
+<!-- TradingView Widget END -->
+
+	    
+  <div class="card bg-light text-dark">
+
+    <div style ="text-align:left;"class="card-header">test</div>
     <div class="card-body">Light card</div>
   </div>
 	    
-  <div style="margin-top:5%;" class="card bg-light text-dark">
-    <div class="card-body">Light card</div>
+  <div class="card bg-light text-dark">
+    <div class="card-body">
+    </div>
   </div>
 	    
-  <div style="margin-top:5%;" class="card bg-light text-dark">
-    <div class="card-body">Light card</div>
+  <div class="card bg-light text-dark">
+      <div   class="card-header"><h5>Fundamentals</h5></div>
+    <div id ="mstar-fundamental" class="card-body"></div>
   </div>
-	    <p id="test"></p>
-	    
-	<script>
-	function getCookieValue(a) {
-	    var b = document.cookie.match('(^|;)\\s*' + a + '\\s*=\\s*([^;]+)');
-	    return b ? b.pop() : '';
-	}
+
+  <p id="test"></p>
+<style>
+
+ table {
+   border-collapse: collapse;
+   width:100%;
+   font-size: 15px;
+}
+ table tr td {
+  border-bottom: 1.4px solid #ddd;
+  padding: 10px;
+}
+
+ table td:first-child{
+ font-weight: bold;
+}
+
+div[class = "card bg-light text-dark"]{
+    margin-top:5%;
+    border-radius:15px;
+}
+</style>
+
+
+  <script>
+function createTable(tableData) {
+  var table = document.createElement('table');
+  var tableBody = document.createElement('tbody');
+
+  tableData.forEach(function(rowData) {
+    var row = document.createElement('tr');
+
+    rowData.forEach(function(cellData) {
+      var cell = document.createElement('td');
+      cell.appendChild(document.createTextNode(cellData));
+      row.appendChild(cell);
+    });
+
+    tableBody.appendChild(row);
+  });
+
+  table.appendChild(tableBody);
+  document.getElementById("mstar-fundamental").appendChild(table);
+}
+
 	var ticker = getCookieValue("ticker")
-	var updated_url = "https://timelessmarketapi.herokuapp.com/fundamental/"+ticker;
-		
- 	fetch(updated_url).then(function (response) {
+	var mstarFundamental_url = "https://timelessmarketapi.herokuapp.com/fundamental/"+ticker;
+
+
+
+ 	fetch(mstarFundamental_url).then(function (response) {
 		return response.json();
 	}).then(function(obj){
 		console.log(obj);
-		document.getElementById("test").innerHTML = obj;
+		createTable(obj);
+
 	}).catch(function(error) {
 		console.error("something went retrieving data");
 	});
-		
-		
-	
+
+
+    var yahoofin_url = "https://timelessmarketapi.herokuapp.com/yahoofin/"+ticker;
+
+ 	fetch(yahoofin_url).then(function (response) {
+		return response.text();
+	}).then(function(obj){
+		console.log(obj);
+        var JSONObject = JSON.parse(obj);
+
+		document.getElementById("stockLongName").innerHTML =JSONObject["longName"]+ " (" +JSONObject["symbol"] + ")";
+
+	}).catch(function(error) {
+		console.error("something went retrieving data");
+	});
+
 	
 	
 	</script>
