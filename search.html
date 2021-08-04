@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Where do you want to go?">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <title>TimelessMarket</title>
+    <link rel="stylesheet" href="nicepage.css" media="screen">
+    <link rel="stylesheet" href="search.css" media="screen">
+    <script class="u-script" type="text/javascript" src="jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 2.26.5, nicepage.com">
+
+<!--    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>-->
+
+    <link rel="stylesheet" href="bootstrap.css">
+
+    <meta property="og:title" content="TimelessMarket">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#478ac9">
+    <link rel="canonical" href="index.html">
+    <meta property="og:url" content="index.html">
+  </head>
+  <body class="u-body"><header class="u-clearfix u-header u-image u-header" id="sec-b64b" data-image-width="1920" data-image-height="1200"><div class="u-clearfix u-sheet u-sheet-1">
+<!--        <nav class="u-menu u-menu-dropdown u-offcanvas u-menu-1">-->
+<!--          <div class="menu-collapse" style="font-size: 11rem; letter-spacing: 0;">-->
+<!--            <a class="u-button-style u-custom-left-right-menu-spacing u-custom-padding-bottom u-custom-top-bottom-menu-spacing u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="#">-->
+<!--              <svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu-hamburger"></use></svg>-->
+<!--              <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><symbol id="menu-hamburger" viewBox="0 0 16 16" style="width: 16px; height: 16px;"><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>-->
+<!--</symbol>-->
+<!--</defs></svg>-->
+<!--            </a>-->
+<!--          </div>-->
+<!--          <div class="u-nav-container">-->
+<!--            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="search.html" style="padding: 10px 20px;">Page 1</a>-->
+<!--</li><li class="u-nav-item"><a class="u-button-style u-nav-link u-text-active-palette-1-base u-text-hover-palette-2-base" href="symbol.html" style="padding: 10px 20px;">Page 2</a>-->
+<!--</li></ul>-->
+<!--          </div>-->
+<!--          <div class="u-nav-container-collapse">-->
+<!--            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">-->
+<!--              <div class="u-menu-close"></div>-->
+<!--              <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="search.html">Page 1</a>-->
+<!--</li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="symbol.html">Page 2</a>-->
+<!--</li></ul>-->
+<!--            </div>-->
+<!--            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>-->
+<!--          </div>-->
+<!--        </nav>-->
+  </div>
+  </header>
+
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+  {
+  "symbols": [
+    {
+      "proName": "FOREXCOM:SPXUSD",
+      "title": "S&P 500"
+    },
+    {
+      "proName": "FOREXCOM:NSXUSD",
+      "title": "Nasdaq 100"
+    },
+    {
+      "description": "US Dollar Index",
+      "proName": "INDEX:DXY"
+    },
+    {
+      "proName": "BITSTAMP:BTCUSD",
+      "title": "BTC/USD"
+    },
+    {
+      "description": "Gold",
+      "proName": "TVC:GOLD"
+    },
+    {
+      "description": "WTI Crude Oil",
+      "proName": "TVC:USOIL"
+    }
+  ],
+  "showSymbolLogo": true,
+  "colorTheme": "dark",
+  "isTransparent": false,
+  "displayMode": "regular",
+  "locale": "en"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+    <section  class="skrollable u-align-center u-clearfix u-section-1" id="carousel_f7bc">
+        <img src="images/onlinelogomaker-100420-1519-6210.png" alt="" class="u-image u-image-default u-image-1" data-image-width="564" data-image-height="94">	<img>
+        <p class="u-text u-text-1">Search a company or ticker</p>
+        <div class="u-expanded-width-sm u-expanded-width-xs u-form u-form-1">
+<!--          <form id="searchForm" action="symbol.html" method="GET" class="u-clearfix u-form-horizontal u-form-spacing-10 u-inner-form" style="padding: 10px" source="custom" name="form">-->
+            <form id="searchForm" action="symbol.html" method="GET" >
+              <div id = "joinInputButton">
+
+              <label for="searchTicker" class="u-form-control-hidden u-label">Name</label>
+              <input type="text" placeholder="e.g. aapl" id="searchTicker" name="ticker" class="u-border-1 u-radius-5 u-border-grey-30 u-border-radius-11 u-input u-input-rectangle u-white" required="">
+
+                <button id="searchSubmit"class="u-active-white u-border-radius-31 u-btn u-btn-round u-btn-submit u-button-style u-hover-palette-1-dark-2 u-btn-1">
+
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xml:space="preserve" class="u-svg-content" viewBox="0 0 56.966 56.966" x="0px" y="0px" style="width: 1em; height: 1em;"><path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23
+                s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92
+                c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17
+                s-17-7.626-17-17S14.61,6,23.984,6z"></path></svg>
+              </button>
+
+              </div>
+
+<!--             <input type="submit" value="submit" class="u-form-control-hidden">-->
+
+
+                <div id="match-list"></div>
+
+<!--            <div class="u-form-send-message u-form-send-success"> Thank you! Your message has been sent. </div>-->
+<!--            <div class="u-form-send-error u-form-send-message"> Unable to send your message. Please fix errors then try again. </div>-->
+<!--            <input type="hidden" value="" name="recaptchaResponse">-->
+          </form>
+        </div>
+
+
+        <blockquote class="u-text u-text-2"><b>Remember time in the market beats timing the market</b>
+        </blockquote>
+<div id="calendarTradingview" class="card">
+  <div class="card-body">
+    <h5 class="card-title">Calendar</h5>
+      <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container"  >
+          <div class="tradingview-widget-container__widget" ></div>
+          <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/markets/currencies/economic-calendar/" rel="noopener" target="_blank"><span class="blue-text"></span></a></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-events.js" async>
+          {
+          "width": "100%",
+          "height": "100%",
+          "colorTheme": "light",
+          "isTransparent": false,
+          "locale": "en",
+          "importanceFilter": "0,1",
+          "currencyFilter": "USD"
+        }
+          </script>
+        </div>
+<!-- TradingView Widget END -->
+  </div>
+</div>
+
+
+  <div id="gainLossTradingview" class="card" >
+  <div class="card-body">
+  <h5 class="card-title">Gainers/Losers</h5>
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container" >
+  <div class="tradingview-widget-container__widget"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-hotlists.js" async>
+  {
+  "colorTheme": "light",
+  "dateRange": "12M",
+  "exchange": "NYSE",
+  "showChart": true,
+  "locale": "en",
+  "width": "100%",
+  "height": "100%",
+  "largeChartUrl": "",
+  "isTransparent": false,
+  "showSymbolLogo": true,
+  "plotLineColorGrowing": "rgba(33, 150, 243, 1)",
+  "plotLineColorFalling": "rgba(33, 150, 243, 1)",
+  "gridLineColor": "rgba(240, 243, 250, 1)",
+  "scaleFontColor": "rgba(120, 123, 134, 1)",
+  "belowLineFillColorGrowing": "rgba(33, 150, 243, 0.12)",
+  "belowLineFillColorFalling": "rgba(33, 150, 243, 0.12)",
+  "symbolActiveColor": "rgba(33, 150, 243, 0.12)"
+}
+  </script>
+</div>
+<!-- TradingView Widget END -->
+  </div>
+</div>
+
+<!--<div id="InterestRateDuka" class="card">-->
+<!--  <div class="card-body">-->
+<!--    <h5 class="card-title">Central Bank Interest Rates</h5>-->
+<!--<script type="text/javascript">DukascopyApplet = {"type":"interest_rate_calendar","params":{"showHeader":false,"tableBorderColor":"#0000e6","delta":true,"changed":true,"nameType":2,"width":"100%","height":"800px","adv":""}};</script><script type="text/javascript" src="https://freeserv-static.dukascopy.com/2.0/core.js"></script>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+    </section>
+
+    <script src="matchList.js"></script>
+
+
+
+
+    <footer class="u-align-left u-black u-clearfix u-footer" id="sec-a3d0"><div class="u-clearfix u-sheet u-sheet-1">
+        <p class="u-text u-text-default u-text-1">© 2020 TimelessMarket Private Ltd.</p>
+      </div></footer>
+
+
+  </body>
+</html>

@@ -1,0 +1,163 @@
+
+.u-section-1 .u-image-1 {width: 504px; height: 82px; margin: 30px auto 0}
+.u-section-1 .u-text-1 {font-size: 1.5rem; margin: 50px 0 50px 0}
+.u-section-1 .u-text-2 {width: 100%; margin: 100px auto 60px}
+
+.sec-b64b{
+margin:0 10vw;
+}
+
+
+/*smaller screen users*/
+@media (max-width: 575px){
+.u-section-1 .u-image-1 {width: 250px; height: 49px}
+}
+
+
+
+/*remove right hand side annoying white space*/
+html,body {
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;500;600;700;900&display=swap');
+    font-family: 'Lato', sans-serif;
+    font-weight:500;
+    font-size: 1vmax;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+@media only screen and (min-width: 1300px){
+    html,body {
+    font-size:16px;
+}}
+
+/* Set All Scrollbars */
+/* width */
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: grey;
+    border-radius: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background:black;
+}
+
+
+td{
+    padding:10px;
+    text-align: left;
+}
+
+input:focus {
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 8px #9ecaed;
+}
+
+#match-list{
+    display:none;
+    padding:0 2.5%;
+    width:60vw;
+    max-width:1000px;
+    overflow-y: auto;
+    max-height:50vh;
+    cursor: pointer;
+    border:1px solid #d9d9d9;
+    border-radius:8px;
+    background:white;
+    z-index: 2;
+    opacity:0.93;
+    position:absolute;
+    top:50px;
+}
+
+@media only screen and (max-height: 850px){
+    #match-list{max-height:40vh;}
+}
+
+tr:hover{background: #cce6ff;}
+
+#searchForm{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap;
+    flex-direction:column
+
+}
+
+/** change all b tag to bold's color to blue **/
+b{color:blue;}
+
+/** change dropdown box ticker to bold **/
+table td:first-child{
+    font-weight: bold;
+}
+
+
+
+#joinInputButton{position:relative;}
+
+#searchTicker{
+    width:60vw;
+    max-width:1000px;
+}
+
+#searchSubmit{
+    margin:0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+/* small screen*/
+@media only screen and (max-width: 800px){
+#searchSubmit{
+     padding-left:4vw;
+     padding-right:4vw;
+}
+
+}
+@media only screen and (min-width: 1000px){
+#calendarTradingview{
+    width:49%;
+    height:700px;
+    margin-right:1%;
+    float:left;
+
+}
+#gainLossTradingview{
+    width:49%;
+    height:700px;
+}
+}
+
+#calendarTradingview{
+
+    height:700px;
+
+}
+#gainLossTradingview{
+    height:700px;
+    margin-top:5%;
+    margin-bottom:5%;
+
+
+}
+
+#InterestRateDuka{
+
+
+    overflow-x: auto;
+
+}
+
