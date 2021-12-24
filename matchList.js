@@ -2,9 +2,11 @@ const search = document.getElementById('searchTicker');
 const matchList = document.getElementById('match-list');
 
 
+var allTickers = "https://timelessmarketapi.herokuapp.com/ticker";
+
 //search heroku ticker site and filter it
 const searchTickers = async searchText => {
-    const res = await fetch("test.json");
+    const res = await fetch(allTickers);
     const tickers = await res.json();
     console.log(tickers);
 
