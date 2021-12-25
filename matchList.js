@@ -1,7 +1,7 @@
 const search = document.getElementById('searchTicker');
 const matchList = document.getElementById('match-list');
 
-
+//updated
 var allTickers = "https://timelessmarketapi.herokuapp.com/ticker";
 
 //search heroku ticker site and filter it
