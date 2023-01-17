@@ -108,7 +108,7 @@ function checkObjKey(objpath,key){
 }
 
 	var ticker = getTicker();
-	var mstarFundamental_url = "https://timelessmarketapi.herokuapp.com/fundamental/"+ticker;
+	var mstarFundamental_url = "https://timelessmarket-api.onrender.com/fundamental/"+ticker;
 
 
 
@@ -130,7 +130,7 @@ function checkObjKey(objpath,key){
 	});
 
 
-    var tmx_annual_url = "https://timelessmarketapi.herokuapp.com/tm/annual/"+ticker;
+    var tmx_annual_url = "https://timelessmarket-api.onrender.com/tm/annual/"+ticker;
 
     fetch(tmx_annual_url).then(function (response) {
         return response.json();
@@ -145,7 +145,7 @@ function checkObjKey(objpath,key){
 		console.error("something went retrieving data");
 	});
 
-    var tmx_quarter_url = "https://timelessmarketapi.herokuapp.com/tm/quarter/"+ticker;
+    var tmx_quarter_url = "https://timelessmarket-api.onrender.com/tm/quarter/"+ticker;
 
     fetch(tmx_quarter_url).then(function (response) {
         return response.json();
@@ -159,7 +159,7 @@ function checkObjKey(objpath,key){
 		console.error("something went retrieving data");
 	});
 
-   var yahoofin_url = "https://timelessmarketapi.herokuapp.com/yahoofin/"+ticker;
+   var yahoofin_url = "https://timelessmarket-api.onrender.com/yahoofin/"+ticker;
 
  	fetch(yahoofin_url).then(function (response) {
 		return response.json();
