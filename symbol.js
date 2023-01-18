@@ -108,26 +108,26 @@ function checkObjKey(objpath,key){
 }
 
 	var ticker = getTicker();
-	var mstarFundamental_url = "https://timelessmarket-api.onrender.com/fundamental/"+ticker;
+	//var mstarFundamental_url = "https://timelessmarket-api.onrender.com/fundamental/"+ticker;
 
 
 
- 	fetch(mstarFundamental_url).then(function (response) {
-		return response.json();
-	}).then(function(obj){
-	console.log(obj);
+ 	// fetch(mstarFundamental_url).then(function (response) {
+	// 	return response.json();
+	// }).then(function(obj){
+	// console.log(obj);
 
-       createChart(obj,"myChart");
-        //createTable(alterArray(obj,1,5),"mstar-fundamental-income-statement");
-	    createTable(alterArray(obj,5,9),"mstar-fundamental-solvency");
-	    createTable(alterArray(obj,9,12),"mstar-fundamental-profitability");
-	    createTable(alterArray(obj,12,16),"mstar-fundamental-margin");
-	    createTable(alterArray(obj,16,18),"mstar-fundamental-cash-flow");
-	    createTable(alterArray(obj,18,20),"mstar-fundamental-dividends");
+    //    createChart(obj,"myChart");
+    //     //createTable(alterArray(obj,1,5),"mstar-fundamental-income-statement");
+	//     createTable(alterArray(obj,5,9),"mstar-fundamental-solvency");
+	//     createTable(alterArray(obj,9,12),"mstar-fundamental-profitability");
+	//     createTable(alterArray(obj,12,16),"mstar-fundamental-margin");
+	//     createTable(alterArray(obj,16,18),"mstar-fundamental-cash-flow");
+	//     createTable(alterArray(obj,18,20),"mstar-fundamental-dividends");
 
-	}).catch(function(error) {
-		console.error("something went wrrong retrieving data");
-	});
+	// }).catch(function(error) {
+	// 	console.error("something went wrrong retrieving data");
+	// });
 
 
     var tmx_annual_url = "https://timelessmarket-api.onrender.com/tm/annual/"+ticker;
